@@ -1,0 +1,35 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.pause = exports.mostrarMenu = void 0;
+const mostrarMenu = () => {
+    console.clear();
+    console.log('+++++++++++++++++++++');
+    console.log('Seleccione una opción');
+    console.log('+++++++++++++++++++++\n');
+    console.log(`1. Crear tarea`);
+    console.log(`2. Listar tareas`);
+    console.log(`3. Listar tareas completadas`);
+    console.log(`4. Listar tareas pendientes`);
+    console.log(`5. Competar tarea(s)`);
+    console.log(`6. Borrar tarea`);
+    console.log(`0. Salir\n`);
+    const readline = require('readline').createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    readline.question('\nSeleccione una opción: \n', (opt) => {
+        readline.close();
+    });
+};
+exports.mostrarMenu = mostrarMenu;
+const pause = () => {
+    const readline = require('readline').createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    readline.question('Presione ENTER para continuar', (opt) => {
+        readline.close();
+    });
+};
+exports.pause = pause;
+//# sourceMappingURL=mensajes.js.map
